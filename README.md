@@ -58,3 +58,10 @@ Follow these instructions to get the project up and running on your local machin
    ```
 
 6. Open your browser and visit <http://localhost:5173> to see the app.
+
+7. Test Credentials for signing in (Password is case sensitive)
+
+   ```bash
+   Email : user@example.com, Password: 1Password.
+
+   ```
