@@ -62,6 +62,6 @@ Follow these instructions to get the project up and running on your local machin
 7. Test Credentials for signing in (Password is case sensitive)
 
    ```bash
-   Email : user@example.com, Password: 1Password.
+   Email : user@example.com, Password : 1Password.
 
    ```
