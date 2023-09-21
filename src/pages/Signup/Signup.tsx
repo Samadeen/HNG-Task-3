@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import styles from './Signup.module.scss';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebase.ts';
@@ -10,6 +10,7 @@ import * as Yup from 'yup';
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [errorState, setErrorState] = useState(null); // Change errorState to null initially
 
   const formik = useFormik({
     // form state
@@ -36,7 +37,10 @@ const Signup = () => {
             navigate('/gallery');
           }
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          setErrorState(error.message); // Set error message
+          console.error(error);
+        });
     },
   });
 
@@ -68,6 +72,7 @@ const Signup = () => {
         >
           Sign Up
         </m.h1>
+        {errorState && <small style={{ color: 'salmon' }}>{errorState}</small>}
         <div className={styles.signup_form}>
           <label htmlFor='email'>
             Email
