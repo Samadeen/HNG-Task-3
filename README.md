@@ -1,27 +1,51 @@
-# React + TypeScript + Vite
+# Image Gallery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple image gallery app built with React and Vite. It allows users to view a collection of images, search for images, and sign in/sign up to access additional features.
 
-Currently, two official plugins are available:
+![App Screenshot](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Browse and view a collection of images.
+- Search for images by keywords.
+- User authentication (Sign up and Sign in).
+- Personalized experience for authenticated users.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Follow these instructions to get the project up and running on your local machine.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### Prerequisites
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Node.js](https://nodejs.org/) (v14 or higher) and [npm](https://www.npmjs.com/).
+- [Firebase](https://firebase.google.com/) account for authentication (you'll need to set up a Firebase project and obtain configuration credentials).
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/samadeen/HNG-Task-3.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd HNG-Task-3
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+
+4. Set up Firebase Authentication:
+   
+- Create a Firebase project on the Firebase Console.
+- Go to Project settings and add a web app to obtain Firebase configuration credentials.
+- Replace the Firebase configuration in src/firebase.ts with your own credentials.
+
+5. Start the development server:
+
+   ```bash
+   npn run dev
+
+6. Open your browser and visit http://localhost:3000 to see the app.
