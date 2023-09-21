@@ -36,7 +36,7 @@ const Signin = () => {
           }
         })
         .catch((error) => {
-          setErrorState(error);
+          setErrorState(error.message);
           console.log(error);
           navigate('/');
         });
@@ -71,7 +71,7 @@ const Signin = () => {
         >
           Sign In
         </m.h1>
-        {errorState && <small>{errorState}</small>}
+        {errorState && <small style={{ color: 'salmon' }}>{errorState}</small>}
         <div className={styles.signin_form}>
           <label htmlFor='email'>
             Email
