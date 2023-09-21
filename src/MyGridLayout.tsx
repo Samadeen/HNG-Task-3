@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
-import { Layout, Layouts, Responsive, WidthProvider } from 'react-grid-layout';
+import { Layout, Responsive, WidthProvider } from 'react-grid-layout';
 import styles from '../src/pages/Gallery/Gallery.module.scss';
 import logo from '../src/assets/shared/logo.svg';
 import { signOut } from 'firebase/auth';
@@ -119,7 +119,7 @@ const MyGridLayout = () => {
   }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const onLayoutChange = (newLayout: Layout[], allLayouts: Layouts) => {
+  const onLayoutChange = (newLayout: Layout[]) => {
     setLayout((prevLayouts) => ({
       ...prevLayouts,
       [screenWidth]: newLayout,
