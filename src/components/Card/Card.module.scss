@@ -1,0 +1,26 @@
+.card {
+  position: relative;
+  img {
+    // height: 400px;
+    // width: 400px;
+    object-fit: cover;
+    background-position: center center;
+    background-position: 100%;
+  }
+
+  .card_details {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    width: 15.375rem;
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      opacity: 0.7;
+      font-family: 'Italianno', cursive;
+    }
+  }
+}
